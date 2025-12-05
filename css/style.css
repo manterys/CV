@@ -38,6 +38,10 @@ header {
   img {
     max-width: 50px;
   }
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 }
 
 button {
@@ -71,21 +75,12 @@ button {
   img {
     display: none;
   }
-}
 
-@media (min-width: 450px) {
-  .column-left {
+  @media (min-width: 450px) {
     width: 60%;
   }
-}
 
-.column-right .name {
-  display: none;
-}
-
-@media (min-width: 768px) {
-
-  .column-left {
+  @media (min-width: 768px) {
     position: absolute;
     top: 0;
     left: 0;
@@ -96,8 +91,14 @@ button {
       display: flex
     }
   }
+}
 
-  .column-right {
+.column-right {
+  .name {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
     width: calc(100% - 300px);
     margin-left: 300px;
     background-color: var(--column-right-background);
@@ -105,10 +106,6 @@ button {
     .name {
       display: block;
     }
-  }
-  
-  header, button {
-    display: none;
   }
 }
 
